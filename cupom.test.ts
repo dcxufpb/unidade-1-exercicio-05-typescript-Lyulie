@@ -73,21 +73,27 @@ test('Inscrição estadual vazia', () => {
 test('Exercício 2 - customizado', () => {
 
   // Defina seus próprios valores para as variáveis a seguir
-  cupom.dados.nome_loja = "";
-  cupom.dados.logradouro = "";
-  cupom.dados.numero = 0;
-  cupom.dados.complemento = "";
-  cupom.dados.bairro = "";
-  cupom.dados.municipio = "";
-  cupom.dados.estado = "";
-  cupom.dados.cep = "";
-  cupom.dados.telefone = "";
-  cupom.dados.observacao = "";
-  cupom.dados.cnpj = "";
-  cupom.dados.inscricao_estadual = "";
+  cupom.dados.nome_loja = "Titos balas";
+  cupom.dados.logradouro = "Av. Senador rio";
+  cupom.dados.numero = 23;
+  cupom.dados.complemento = "casa";
+  cupom.dados.bairro = "Mangabeira";
+  cupom.dados.municipio = "João Pessoa";
+  cupom.dados.estado = "PB";
+  cupom.dados.cep = "58038-000";
+  cupom.dados.telefone = "(83) 8888-7777";
+  cupom.dados.observacao = "Praça Coqueiral";
+  cupom.dados.cnpj = "42.591.651/0797-34";
+  cupom.dados.inscricao_estadual = "244.898.500.113";
 
   //E atualize o texto esperado abaixo
   expect(cupom.dados_loja()).toBe(
-    `
+`Titos balas
+Av. Senador rio, 23 casa
+Mangabeira - João Pessoa - PB
+CEP:58038-000 Tel (83) 8888-7777
+Praça Coqueiral
+CNPJ: 42.591.651/0797-34
+IE: 244.898.500.113
 `);
 });
